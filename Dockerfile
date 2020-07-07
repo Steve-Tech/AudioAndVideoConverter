@@ -1,10 +1,7 @@
-FROM python:3
+FROM tiangolo/uwsgi-nginx-flask:python3.8
 
-ADD ./ /
+COPY ./ /app
 
 RUN pip install -r requirements.txt
 RUN apt-get -y update
-RUN apt-get -y upgrade
 RUN apt-get -y install ffmpeg
-
-CMD [ "python", "./main.py" ]

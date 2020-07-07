@@ -2,4 +2,4 @@ Flask==1.1.2
 Flask-Session==0.3.2
 Werkzeug==1.0.1
 confidential==2.3.1
-git+https://github.com/ytdl-org/youtube-dl.git@refs/pull/25717/head
+youtube-dl
