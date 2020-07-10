@@ -49,10 +49,10 @@ function upload_and_send_conversion_request() {
         const chosenFile = input.files[0];
         const filename = chosenFile.name;
         const filenameParts = filename.split('.');
-        const fileExt = filenameParts[filenameParts.length - 1];
+        const fileExt = filenameParts[filenameParts.length - 1].toLowerCase();
         const filesize = chosenFile.size;
         if (!allowedFiletypes.includes(fileExt)) {
-            show_alert('Incompatible filetype selected. Click <a href="https://freeaudioconverter.net/filetypes" \
+            show_alert('Incompatible filetype selected. Click <a href="/filetypes" \
             target="_blank">here</a> to see the list of compatible filetypes.', "danger");
                 reset();
                 return;

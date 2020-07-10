@@ -69,11 +69,12 @@ You can run the Flask app locally for development purposes or if you want audio/
 - Enter localhost:5000 in the address bar of your web browser and hit enter.
 
 # Building with Docker
-Run these commands to build and run the Dockerfile. Note sudo is usually required on Linux.
+Run these commands to build and run the Dockerfile. Note sudo is usually required on Linux. Replace `5000` with your chosen port.
 ```
 docker build -t audio-and-video-converter .
-docker run -p 5000:5000 audio-and-video-converter
+docker run -p 5000:80 audio-and-video-converter
 ```
+The uWSGI socket port is also on port `8080`.
 
 ## Notes for contributors
 Contributors are welcome, simply submit a pull request.
